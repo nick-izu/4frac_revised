@@ -27,7 +27,7 @@ DFN.mesh_network(uniform_mesh=True)
 
 DFN.lagrit2pflotran()
 
-restart_file = "DUMMY/dfnworks-main/examples/ade_example/dfn_restart.in"
+restart_file = "/dfnWorks/examples/4frac_revised/dfn_restart.in"
 
 DFN.pflotran(transient=True,restart=True,restart_file=restart_file)
 DFN.parse_pflotran_vtk_python()       
