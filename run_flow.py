@@ -27,12 +27,13 @@ DFN.mesh_network(uniform_mesh=True)
 
 DFN.lagrit2pflotran()
 
-restart_file = "/dfnWorks/examples/4frac_revised/dfn_restart.in"
+#restart_file = "/dfnWorks/examples/4frac_revised/dfn_restart.in"
 
-DFN.pflotran(transient=True,restart=True,restart_file=restart_file)
+#DFN.pflotran(transient=True,restart=True,restart_file=restart_file)
+DFN.pflotran()
 DFN.parse_pflotran_vtk_python()       
 DFN.pflotran_cleanup()
-DFN.pflotran_cleanup(index_finish=100,filename=restart_file)
+#DFN.pflotran_cleanup(index_finish=100,filename=restart_file)
 
 
 
