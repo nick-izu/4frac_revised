@@ -15,7 +15,7 @@ SIMULATION
     /
   /
 #  CHECKPOINT
-#    TIMES d 100.0d0
+#    TIMES y 100.0d0
 #  /
   RESTART dfn_explicit-restart.h5 0.
 END
@@ -99,8 +99,8 @@ END
 #=========================== times ============================================
 TIME
   INITIAL_TIMESTEP_SIZE  1.d-6 y
-  FINAL_TIME 1.d6 s
-  MAXIMUM_TIMESTEP_SIZE 1.d3 s
+  FINAL_TIME 1.d6 y
+  MAXIMUM_TIMESTEP_SIZE 1.d3 y
   #STEADY_STATE
 END
 
