@@ -16,7 +16,7 @@ SIMULATION
   /
   CHECKPOINT
     FORMAT HDF5
-    TIMES s 100.0d0
+    TIMES y 10.0d0
   /
 END
 
