@@ -25,16 +25,17 @@ outputAllRadii: 0
 */
                       
 
-domainSize: {1000,1000,1000} 
+domainSize: {5000,2000,1000} 
     /* Mandatory Parameter.
         Creates a domain with dimension x*y*z centered at the origin.*/
 
-numOfLayers: 0    //number of layers
+numOfLayers: 3    //number of layers
 
 
 layers: 
-{-500,0}
-{0,500}
+{-500,200}
+{200,350}
+{350,500}
 
 /*  Layers need to be listed line by line
     Format: {minZ, maxZ}
@@ -47,7 +48,7 @@ layers:
 numOfRegions: 1 // There will be one region in the domain
 
 regions:
-{-500, 500, -500, 500, -500, 500}
+{-2500, 2500, -1000, 1000, -500, 500}
 // Will create a region for sampling with
 // x-min: -5, x-max: 5
 // y-min: -10, y-max: 10
@@ -75,7 +76,7 @@ printRejectReasons: 0
         1: print all rejection reasons to screen
 */
 
-visualizationMode: 0
+visualizationMode: 1
 /* Options: 0 or 1 
    Used during meshing: 
    0: creates a fine mesh, according to h parameter;
