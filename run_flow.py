@@ -32,23 +32,23 @@ DFN.mesh_network(visual_mode=False)
 ## JDH This portion looks good. 
 # First we define values for the stochastic families
 
-#variable = "transmissivity"
-#function = "correlated"
-#params = {"alpha":2.2*10**-9, "beta":0.8}
-#b1,perm1,T1 = DFN.generate_hydraulic_values(variable,function,params,family_id=1)
+variable = "transmissivity"
+function = "correlated"
+params = {"alpha":2.2*10**-9, "beta":0.8}
+b1,perm1,T1 = DFN.generate_hydraulic_values(variable,function,params,family_id=1)
 
-#function = "correlated"
-#params = {"alpha":2.2*10**-9, "beta":0.8}
-#b2,perm2,T2 = DFN.generate_hydraulic_values(variable,function,params,family_id=2)
+function = "correlated"
+params = {"alpha":2.2*10**-9, "beta":0.8}
+b2,perm2,T2 = DFN.generate_hydraulic_values(variable,function,params,family_id=2)
 
-#function = "correlated"
-#params = {"alpha":2.2*10**-9, "beta":0.8}
-#b3,perm3,T3 = DFN.generate_hydraulic_values(variable,function,params,family_id=3)
+function = "correlated"
+params = {"alpha":2.2*10**-9, "beta":0.8}
+b3,perm3,T3 = DFN.generate_hydraulic_values(variable,function,params,family_id=3)
 
 # Then we combine them.
-#T = T1 + T2 + T3 
-#b = b1 + b2 + b3
-#perm = perm1 + perm2 + perm3 
+T = T1 + T2 + T3 
+b = b1 + b2 + b3
+perm = perm1 + perm2 + perm3 
 
 # Entires 0-3, should be zero here. 
 print(b[0:5])
