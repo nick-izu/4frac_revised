@@ -56,7 +56,7 @@ regions:
 
 orientationOption: 0 // Fracture Orientations will be defined using Trend/Plunge
 
-h: 10
+h: 1
   /* Minimum fracture length scale(meters)
     Any fracture with a feature, such as and intersection, of less than h will be rejected. */
 
@@ -86,7 +86,7 @@ seed: 92731535
     //Seed for random generator. 
         
 
-domainSizeIncrease: {200,200,100} 
+domainSizeIncrease: {500,200,100} 
           //temporary size increase for inserting fracture centers outside domain
           //increases the entire width by this ammount. So, {1,1,1} will increase
           //the domain by adding .5 to the +x, and subbtracting .5 to the -x, etc
@@ -466,7 +466,7 @@ Also, coordinates must be co-planar */
 
 //NOTE: Only one aperture type may be used at a time 
 
-aperture: 2  //choise of aperture option described above
+aperture: 3  //choise of aperture option described above
 
 //(**** 1)meanAperture and stdAperture for using LogNormal distribution.********)
 meanAperture:  -3 /*Mean value for aperture using  
