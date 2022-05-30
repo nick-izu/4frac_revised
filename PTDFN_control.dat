@@ -88,12 +88,12 @@ init_npart: 100
     {in_xmin, in_xmax,in_ymin, in_ymax, in_zmin, in_zmax} **************/
 init_oneregion: yes    
 in_partn: 5000
-in_xmin: -2000
-in_xmax: -960 
-in_ymin: -326
-in_ymax:  326
-in_zmin:  53.8 
-in_zmax:  46.2
+in_xmin: 500
+in_xmax: 1540 
+in_ymin: 674
+in_ymax: 1326
+in_zmin: 480 
+in_zmax: 520
 
 /**** all particles are placed randomly over all fracture surface 
      (not only on boundary edges!) ************************************/
