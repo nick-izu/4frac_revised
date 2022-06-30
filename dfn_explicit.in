@@ -9,9 +9,6 @@ SIMULATION
       MODE RICHARDS
     /
   /
-  CHECKPOINT
-    FORMAT HDF5
-  /
 END
 
 SUBSURFACE
@@ -19,11 +16,11 @@ SUBSURFACE
 DFN
 
 #=========================== numerical methods ================================
-NUMERICAL_METHODS FLOW
-  TIMESTEPPER
-    PRESSURE_CHANGE_GOVERNOR 1.d2
-  /
-END
+#NUMERICAL_METHODS FLOW
+  #TIMESTEPPER
+   # PRESSURE_CHANGE_GOVERNOR 1.d2
+  #/
+#END
 
 #=========================== discretization ===================================
 GRID
@@ -34,7 +31,7 @@ END
 
 #=========================== fluid properties =================================
 FLUID_PROPERTY
-  DIFFUSION_COEFFICIENT 1.d-9
+  DIFFUSION_COEFFICIENT 1.6d-9
 END
 
 DATASET Permeability
@@ -71,8 +68,9 @@ END
 
 #=========================== output options ===================================
 OUTPUT
-  VELOCITY_AT_CENTER
+  PRINT_PRIMAL_GRID
   FORMAT VTK
+  MASS_BALANCE
   MASS_FLOWRATE
   VARIABLES
     MATERIAL_ID_KLUDGE_FOR_VISIT
@@ -80,21 +78,12 @@ OUTPUT
     POROSITY
     LIQUID_PRESSURE
   /
-  MASS_BALANCE_FILE
-    PERIODIC TIMESTEP 1
-    TOTAL_MASS_REGIONS
-      all
-      inflow
-      outflow
-    /
-  /
-  MASS_FLOWRATE
 END
 
 #=========================== times ============================================
 TIME
   INITIAL_TIMESTEP_SIZE  1.d-6 y
-  FINAL_TIME 1000000.d0 y
+  FINAL_TIME 100000.d0 y
   STEADY_STATE
 END
 
